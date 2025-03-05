@@ -3,7 +3,7 @@ import type { ComponentProps, FC } from 'react'
 
 import { mergeClassNames } from '@/presentation/utils'
 
-import './Spinner.styles.sass'
+import './Spinner.sass'
 
 type SpinnerProps = ComponentProps<typeof LoaderCircleIcon>
 

@@ -2,7 +2,7 @@ import type { ComponentProps, FC } from 'react'
 
 import { mergeClassNames } from '@/presentation/utils'
 
-import './Error.styles.sass'
+import './Error.sass'
 
 export const ErrorWrapper: FC<ComponentProps<'div'>> = ({ className, ...errorWrapperProps }) => (
   <div className={mergeClassNames('error-wrapper', className)} {...errorWrapperProps} />
