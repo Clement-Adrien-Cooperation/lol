@@ -1,0 +1,2 @@
+@function fade($color, $alpha: 0.5, $space: oklch)
+  @return color-mix(in #{$space}, $color, transparent calc(100% - ($alpha * 100%)))
