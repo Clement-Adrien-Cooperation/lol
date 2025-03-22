@@ -16,6 +16,7 @@ type FallbackProps = {
 
 export const Fallback: FC<FallbackProps> = ({ message, route }) => {
   const { translate } = useI18n()
+
   return (
     <ErrorWrapper>
       <ErrorTitle>

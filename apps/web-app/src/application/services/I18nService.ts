@@ -8,7 +8,7 @@ const isSupportedLocale = (locale: string): locale is Locale => {
 }
 
 export const I18nService = {
-  changeLocale: (locale: Locale) => {
+  changeLang: (locale: Locale) => {
     document.documentElement.setAttribute('lang', locale)
   },
 
@@ -37,7 +37,8 @@ export const I18nService = {
   },
 
   getPolyglot: (locale: Locale) => {
-    return new Polyglot({ locale, phrases: dictionaries[locale] })
+    const selectedDictionary = dictionaries[locale] ?? dictionaries[DEFAULT_LOCALE]
+    return new Polyglot({ locale, phrases: selectedDictionary })
   },
 
   saveFavoriteLocale: (locale: Locale) => {
